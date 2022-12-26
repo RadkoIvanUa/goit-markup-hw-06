@@ -3,6 +3,8 @@
 
   /* iris-color*/
   --primary-brand-color: #4d5ae5;
+  /* ocean-color */
+  --pressed-color: #404bbf;
   /* navy-blue-color */
   --dark-color: #2e2f42;
   /* navy-blue-modal */
@@ -27,7 +29,7 @@
 }
 
 body {
-  font-family: "Roboto", "Helvetica Neue", "Verdana", "Tahoma", sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', 'Verdana', 'Tahoma', sans-serif;
   font-size: 16px;
   color: var(--text-color);
   background-color: var(--clean-color);
@@ -85,7 +87,7 @@ textarea:focus {
 
 /*________DEFAULT STYLE________*/
 .btn {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   cursor: pointer;
   font-weight: 700;
   line-height: 1.5;
@@ -134,7 +136,7 @@ textarea:focus {
 }
 
 .active-page::after {
-  content: "";
+  content: '';
 
   display: block;
 
@@ -156,8 +158,7 @@ textarea:focus {
 /*_______HEADER________*/
 .header {
   background-color: var(--clean-color);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-menu {
@@ -193,7 +194,7 @@ textarea:focus {
 }
 
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
@@ -256,11 +257,7 @@ textarea:focus {
 /*_____HERO____ */
 
 .hero {
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero-image.jpg);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-image.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -272,7 +269,7 @@ textarea:focus {
 }
 
 .hero-title {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 56px;
@@ -299,20 +296,20 @@ textarea:focus {
   min-width: 170px;
   padding: 16px 32px;
 
-  transition: box-shadow var(--main-transition-duration)
-    var(--main-cubic-bezier);
+  transition: box-shadow var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
 .hero-btn:hover,
 .hero-btn:focus,
 .send-btn:hover,
 .send-btn:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.hero-btn:active {
-  background: #404bbf;
+.hero-btn:active,
+.send-btn:active,
+.subscribe-btn:active {
+  background: var(--pressed-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /*____BENEFITS SECTION____*/
@@ -373,8 +370,7 @@ textarea:focus {
   text-align: center;
 
   background: var(--clean-color);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 
   padding-bottom: 32px;
@@ -401,6 +397,12 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: background-color var(--main-transition-duration) var(--main-cubic-bezier);
+}
+
+.social-link:hover {
+  background-color: var(--pressed-color);
 }
 
 .social-icon {
@@ -428,8 +430,7 @@ textarea:focus {
   justify-content: center;
   align-items: center;
 
-  transition: color var(--main-transition-duration) var(--main-cubic-bezier),
-    border var(--main-transition-duration) var(--main-cubic-bezier);
+  transition: color var(--main-transition-duration) var(--main-cubic-bezier), border var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
 .customer-link:hover,
@@ -471,18 +472,15 @@ textarea:focus {
 
   padding: 12px 24px;
 
-  transition: color var(--main-transition-duration) var(--main-cubic-bezier),
-    background var(--main-transition-duration) var(--main-cubic-bezier),
-    box-shadow var(--main-transition-duration) var(--main-cubic-bezier),
-    border-radius var(--main-transition-duration) var(--main-cubic-bezier);
+  transition: color var(--main-transition-duration) var(--main-cubic-bezier), background var(--main-transition-duration) var(--main-cubic-bezier),
+    box-shadow var(--main-transition-duration) var(--main-cubic-bezier), border-radius var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
   color: var(--clean-color);
   background: var(--primary-brand-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
@@ -524,14 +522,14 @@ textarea:focus {
 
   overflow: hidden;
 
-  transition: transform var(--main-transition-duration) var(--main-cubic-bezier),
+  transition: transform var(--main-transition-duration) var(--main-cubic-bezier), box-shadow var(--main-transition-duration) var(--main-cubic-bezier),
     box-shadow var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
 .works-item:hover,
 .works-item:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border: 0.5px solid var(--light-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .works-item .link:hover .overlay,
@@ -595,8 +593,7 @@ textarea:focus {
 .footer-social-list .social-link {
   background-color: rgba(255, 255, 255, 0.1);
 
-  transition: background-color var(--main-transition-duration)
-    var(--main-cubic-bezier);
+  transition: background-color var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
 .footer-social-list .social-link:hover,
@@ -656,8 +653,7 @@ textarea:focus {
   top: 0;
   left: 0;
 
-  transition: opacity var(--main-transition-duration) var(--main-cubic-bezier),
-    visibility var(--main-transition-duration) var(--main-cubic-bezier);
+  transition: opacity var(--main-transition-duration) var(--main-cubic-bezier), visibility var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
 .backdrop.is-hidden {
@@ -670,8 +666,7 @@ textarea:focus {
   width: 410px;
   min-height: 575px;
   background-color: #fcfcfc;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
 
@@ -708,17 +703,14 @@ textarea:focus {
   position: absolute;
   top: 24px;
   right: 24px;
-
-  transition: box-shadow var(--main-transition-duration)
-      var(--main-cubic-bezier),
-    border var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
-.modal-btn:hover,
-.modal-icon:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border: transparent;
+.modal-btn:active {
+  background-color: var(--pressed-color);
+}
+
+.modal-btn:active .modal-icon {
+  fill: var(--clean-color);
 }
 
 .modal-icon {
@@ -751,10 +743,9 @@ textarea:focus {
 
 .modal-input {
   width: 100%;
-  margin-bottom: 8px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 11px 0 11px 38px;
+  padding: 8px 0 8px 38px;
 
   background-color: #fcfcfc;
 
@@ -781,23 +772,90 @@ textarea:focus {
 }
 
 .input-field {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-relative {
   position: relative;
 }
 
 .input-icon {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 24px;
   display: block;
 
   position: absolute;
   top: 50%;
   left: 20px;
 
-  transform: translateY(-75%);
+  transform: translateY(-50%);
 }
 
+.comment-input {
+  margin-bottom: 8px;
+}
 .comment-input > .modal-input {
   padding-left: 16px;
+}
+
+.check-label {
+  display: flex;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--dark-color);
+  border-radius: 2px;
+  margin-right: 8px;
+
+  transition-property: background-image, background-color, border;
+  transition-duration: var(--main-transition-duration);
+  transition-timing-function: var(--main-cubic-bezier);
+}
+
+.checkbox:checked + .check-icon {
+  background-image: url(../images/check.svg);
+  background-color: var(--pressed-color);
+  border: 1.25px solid var(--pressed-color);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.check-text {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+
+.check-link {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--primary-brand-color);
+  text-decoration: underline;
+}
+
+.check-link:visited {
+  color: var(--primary-brand-color);
 }
 
 .send-btn {
