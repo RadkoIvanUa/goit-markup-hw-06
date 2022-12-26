@@ -758,12 +758,15 @@ textarea:focus {
 
   background-color: #fcfcfc;
 
-  transition: border var(--main-transition-duration) var(--main-cubic-bezier),
-    fill var(--main-transition-duration) var(--main-cubic-bezier);
+  transition: border var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
 .modal-input:focus {
   border: 1px solid var(--primary-brand-color);
+}
+
+.modal-input ~ .input-icon {
+  transition: fill var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
 .modal-input:focus ~ .input-icon {
