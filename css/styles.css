@@ -702,19 +702,22 @@ textarea {
   position: absolute;
   top: 24px;
   right: 24px;
+
+  transition: box-shadow var(--main-transition-duration)
+      var(--main-cubic-bezier),
+    border var(--main-transition-duration) var(--main-cubic-bezier);
 }
 
-.modal-btn:active {
-  background-color: var(--primary-brand-color);
+.modal-btn:hover,
+.modal-icon:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border: transparent;
 }
 
 .modal-icon {
   width: 8px;
   height: 8px;
-}
-
-.modal-btn:active .modal-icon {
-  fill: var(--clean-color);
 }
 
 .user-contacts {
