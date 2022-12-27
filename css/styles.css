@@ -610,6 +610,8 @@ textarea:focus {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+  min-width: 264px;
+  color: var(--accent-color);
 }
 
 .email-input::placeholder {
@@ -705,11 +707,15 @@ textarea:focus {
   right: 24px;
 }
 
-.modal-btn:active {
+.modal-btn:active,
+.modal-btn:focus,
+.modal-btn:hover{
   background-color: var(--pressed-color);
 }
 
-.modal-btn:active .modal-icon {
+.modal-btn:active .modal-icon, 
+.modal-btn:focus .modal-icon, 
+.modal-btn:hover .modal-icon {
   fill: var(--clean-color);
 }
 
@@ -745,7 +751,7 @@ textarea:focus {
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding: 8px 0 8px 38px;
+  padding: 8px 4px 8px 38px;
 
   background-color: #fcfcfc;
 
@@ -797,6 +803,7 @@ textarea:focus {
 }
 .comment-input > .modal-input {
   padding-left: 16px;
+  min-height: 120px; 
 }
 
 .check-label {
